@@ -57,6 +57,15 @@ export class Dashboard extends Component {
     })
 }
 
+macroData = {
+  totalRevenue2020: "908,689.2",
+  totalRevenueChangeFrom2019To2020: "1.87%",
+  totalExpenses2020: "918,502.4",
+  totalExpensesChangeFrom2019To2020: "6.38%",
+  totalBalance2020: "-9,813.2",
+  totalBalanceChangeFrom2019To2020: "-134.35%",
+}
+
 addTodo (event) {
     event.preventDefault();
 
@@ -89,23 +98,26 @@ inputChangeHandler(event) {
     });
 }
   areaData = {
-    labels: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    //labels: ["2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020"],
+    labels: ["2017","2018","2019"],
     datasets: [{
-        label: 'Product-1',
-        data: [3, 3, 8, 5, 7, 4, 6, 4, 6, 3],
+        label: 'Heildarútgjöld',
+        //data: [217232,	247820,	266642,	287383,	301897,	321990,	356245,	409491,	673023,	578706,	621511,	593651,	603898,	618049,	669829,	698324,	847306,	795299,	852752,	894531],
+        data: [795299, 852752, 894531],
         backgroundColor: '#2196f3',
-        borderColor: '#0c83e2',
+        borderColor: '#FF6384',
         borderWidth: 1,
-        fill: true,
+        fill: false,
         datasetKeyProvider: "key1"
       },
       {
-        label: 'Product-2',
-        data: [7, 5, 14, 7, 12, 6, 10, 6, 11, 5],
+        label: 'Heildartekjur',
+        //data: [226386, 241789, 253544, 268767, 307743, 364432, 414537, 457259, 479148, 450278, 474717, 497094, 545548, 584545, 686128, 692377, 1148958, 840940, 879334, 872459],
+        data: [840940, 879334, 872459],
         backgroundColor: '#19d895',
         borderColor: '#15b67d',
         borderWidth: 1,
-        fill: true,
+        fill: false,
         datasetKeyProvider: "key2"
       }
     ]
@@ -121,9 +133,9 @@ inputChangeHandler(event) {
         },
         ticks: {
           beginAtZero: true,
-          min: 0,
-          max: 20,
-          stepSize: 5,
+          min: 750000,
+          max: 950000,
+          stepSize: 25000,
         }
       }],
       xAxes: [{
@@ -140,7 +152,7 @@ inputChangeHandler(event) {
     },
     elements: {
       point: {
-        radius: 2
+        radius: 0
       }
     },
     layout: {
@@ -251,12 +263,14 @@ toggleProBanner() {
         <div className="row proBanner">
           <div className="col-12">
             <span className="d-flex align-items-center purchase-popup">
-              <p>Like what you see? Check out our premium version for more.</p>
-              <a href="https://github.com/BootstrapDash/StarAdmin-Free-React-Admin-Template" target="_blank" rel="noopener noreferrer" className="btn ml-auto download-button">Download Free Version</a>
-              <a href="http://www.bootstrapdash.com/demo/star-admin-pro-react/template/demo_1/preview/dashboard" rel="noopener noreferrer" target="_blank" className="btn purchase-button">Upgrade To Pro</a>
-              <i className="mdi mdi-close bannerClose" onClick={this.toggleProBanner}></i>
+              <p>Upplýsingar byggðar á fjárlögum 2019 og 2020. Birt með fyrirvara.</p>
+              <a href="https://www.stjornarradid.is/library/01--Frettatengt---myndir-og-skrar/FJR/Fjarlog%202019_lokaskjal.pdf" target="_blank" rel="noopener noreferrer" className="btn ml-auto download-button">Fjárlög 2019</a>
+              <a href="https://www.althingi.is/altext/pdf/150/s/0561.pdf" rel="noopener noreferrer" target="_blank" className="btn purchase-button">Fjárlög 2020</a>
             </span>
           </div>
+        </div>
+        <div>
+          <h3>Fjárlög 2020 </h3>
         </div>
         <div className="row">
           <div className="col-xl-3 col-lg-6 col-md-6 col-sm-6 grid-margin stretch-card">
@@ -267,14 +281,14 @@ toggleProBanner() {
                     <i className="mdi mdi-cube text-danger icon-lg"></i>
                   </div>
                   <div className="float-right">
-                    <p className="mb-0 text-right text-dark">Total Revenue</p>
+                    <p className="mb-0 text-right text-dark">Heildartekjur</p>
                     <div className="fluid-container">
-                      <h3 className="font-weight-medium text-right mb-0 text-dark">$65,650</h3>
+                      <h3 className="font-weight-medium text-right mb-0 text-dark"> {this.macroData.totalRevenue2020} <br/> milljón kr. </h3>
                     </div>
                   </div>
                 </div>
                 <p className="text-muted mt-3 mb-0">
-                  <i className="mdi mdi-alert-octagon mr-1" aria-hidden="true"></i> 65% lower growth </p>
+                  <i className="mdi mdi-lightbulb-outline mr-1" aria-hidden="true"></i> {this.macroData.totalRevenueChangeFrom2019To2020} hækkun </p>
               </div>
             </div>
           </div>
@@ -286,14 +300,14 @@ toggleProBanner() {
                     <i className="mdi mdi-receipt text-warning icon-lg"></i>
                   </div>
                   <div className="float-right">
-                    <p className="mb-0 text-right text-dark">Orders</p>
+                    <p className="mb-0 text-right text-dark">Heildarútgjöld</p>
                     <div className="fluid-container">
-                      <h3 className="font-weight-medium text-right mb-0 text-dark">3455</h3>
+                      <h3 className="font-weight-medium text-right mb-0 text-dark"> {this.macroData.totalExpenses2020} <br/> milljón kr. </h3>
                     </div>
                   </div>
                 </div>
                 <p className="text-muted mt-3 mb-0">
-                  <i className="mdi mdi-bookmark-outline mr-1" aria-hidden="true"></i> Product-wise sales </p>
+                  <i className="mdi mdi-lightbulb-outline mr-1" aria-hidden="true"></i> {this.macroData.totalExpensesChangeFrom2019To2020} hækkun</p>
               </div>
             </div>
           </div>
@@ -305,14 +319,14 @@ toggleProBanner() {
                     <i className="mdi mdi-poll-box text-success icon-lg"></i>
                   </div>
                   <div className="float-right">
-                    <p className="mb-0 text-right text-dark">Sales</p>
+                    <p className="mb-0 text-right text-dark">Heildarjöfnuður</p>
                     <div className="fluid-container">
-                      <h3 className="font-weight-medium text-right mb-0 text-dark">5693</h3>
+                      <h3 className="font-weight-medium text-right mb-0 text-dark"> {this.macroData.totalBalance2020} <br/> milljón kr. </h3>
                     </div>
                   </div>
                 </div>
                 <p className="text-muted mt-3 mb-0">
-                  <i className="mdi mdi-calendar mr-1" aria-hidden="true"></i> Weekly Sales </p>
+                  <i className="mdi mdi-lightbulb-outline mr-1" aria-hidden="true"></i> {this.macroData.totalBalanceChangeFrom2019To2020} lækkun </p>
               </div>
             </div>
           </div>
@@ -324,14 +338,14 @@ toggleProBanner() {
                     <i className="mdi mdi-account-box-multiple text-info icon-lg"></i>
                   </div>
                   <div className="float-right">
-                    <p className="mb-0 text-right text-dark">Employees</p>
+                    <p className="mb-0 text-right text-dark">Starfsmenn</p>
                     <div className="fluid-container">
-                      <h3 className="font-weight-medium text-right mb-0 text-dark">246</h3>
+                      <h3 className="font-weight-medium text-right mb-0 text-dark">21 þúsund</h3>
                     </div>
                   </div>
                 </div>
                 <p className="text-muted mt-3 mb-0">
-                  <i className="mdi mdi-reload mr-1" aria-hidden="true"></i> Product-wise sales </p>
+                  <i className="mdi mdi-lightbulb-outline mr-1" aria-hidden="true"></i> 12% vinnumarkaðarins </p>
               </div>
             </div>
           </div>
@@ -341,15 +355,15 @@ toggleProBanner() {
             <div className="card">
               <div className="card-body">
                 <div className="d-flex justify-content-between align-items-center mb-4">
-                  <h2 className="card-title mb-0">Product Analysis</h2>
+                  <h5>Heildartekjur og útgjöld íslenska ríkisins</h5>
                   <div className="wrapper d-flex">
                     <div className="d-flex align-items-center mr-3">
                       <span className="dot-indicator bg-success"></span>
-                      <p className="mb-0 ml-2 text-muted">Product</p>
+                      <p className="mb-0 ml-2 text-muted">Heildartekjur</p>
                     </div>
                     <div className="d-flex align-items-center">
                       <span className="dot-indicator bg-primary"></span>
-                      <p className="mb-0 ml-2 text-muted">Resources</p>
+                      <p className="mb-0 ml-2 text-muted">Heildarútgjöld</p>
                     </div>
                   </div>
                 </div>
