@@ -15,16 +15,16 @@ class Navbar extends Component {
           </button>
           <ul className="navbar-nav navbar-nav-left header-links">
             <li className="nav-item d-none d-md-flex">
-              <a href="!#" onClick={evt =>evt.preventDefault()} className="nav-link">Schedule <span className="badge badge-primary ml-1">New</span>
-              </a>
+              <a href="!#" onClick={evt =>evt.preventDefault()} className="nav-link"> <span className="badge badge-primary ml-1">{/**/}</span>
+              <i className="mdi mdi-view-dashboard"></i>Mælaborð ríkisins</a>
             </li>
-            <li className="nav-item active d-none d-xl-flex">
+            <li className="nav-item d-none d-xl-flex">
               <a href="!#" onClick={evt =>evt.preventDefault()} className="nav-link">
-                <i className="mdi mdi-elevation-rise"></i>Reports</a>
+                <i className="mdi mdi-file-tree"></i>Ríkisstofnanir</a>
             </li>
             <li className="nav-item d-none d-lg-flex">
               <a href="!#" onClick={evt =>evt.preventDefault()} className="nav-link">
-                <i className="mdi mdi-bookmark-plus-outline"></i>Score</a>
+                <i className="mdi mdi-bookmark-plus-outline"></i>Um verkefnið</a>
             </li>
           </ul>
           <ul className="navbar-nav navbar-nav-right ml-lg-auto">
@@ -116,8 +116,8 @@ class Navbar extends Component {
             <li className="nav-item  nav-profile border-0">
               <Dropdown alignRight>
                 <Dropdown.Toggle className="nav-link count-indicator bg-transparent">
-                  <span className="profile-text">Richard V.Welsh !</span>
-                  <img className="img-xs rounded-circle" src={require("../../assets/images/faces/face8.jpg")} alt="Profile" />
+                  <span className="profile-text"> {/*nafn*/} </span>
+                  {/*<img className="img-xs rounded-circle" src={require("../../assets/images/faces/face8.jpg")} alt="Profile" />*/}
                 </Dropdown.Toggle>
                 <Dropdown.Menu className="preview-list navbar-dropdown pb-3">
                   <Dropdown.Item className="dropdown-item p-0 preview-item d-flex align-items-center border-bottom" href="!#" onClick={evt =>evt.preventDefault()}>
