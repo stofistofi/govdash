@@ -15,7 +15,7 @@ class Navbar extends Component {
           </button>
           <ul className="navbar-nav navbar-nav-left header-links">
             <li className="nav-item d-none d-md-flex">
-              <a href="!#" onClick={evt =>evt.preventDefault()} className="nav-link"> <span className="badge badge-primary ml-1">{/**/}</span>
+              <a href="/demo/star-admin-free/react/template/demo_1/preview/dashboard" onClick={evt =>evt.preventDefault()} className="nav-link"> <span className="badge badge-primary ml-1">{/**/}</span>
               <i className="mdi mdi-view-dashboard"></i>Mælaborð ríkisins</a>
             </li>
             <li className="nav-item d-none d-xl-flex">
