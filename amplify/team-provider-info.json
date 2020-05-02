@@ -1,0 +1,15 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-govdash-dev-212606-authRole",
+            "UnauthRoleArn": "arn:aws:iam::588924578635:role/amplify-govdash-dev-212606-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::588924578635:role/amplify-govdash-dev-212606-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "amplify-govdash-dev-212606-deployment",
+            "UnauthRoleName": "amplify-govdash-dev-212606-unauthRole",
+            "StackName": "amplify-govdash-dev-212606",
+            "StackId": "arn:aws:cloudformation:eu-west-1:588924578635:stack/amplify-govdash-dev-212606/8a5b6580-8cbb-11ea-822d-024980a27cd8",
+            "AmplifyAppId": "d3bbxcupimf3pj"
+        }
+    }
+}
