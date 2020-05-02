@@ -58,11 +58,11 @@ export class Dashboard extends Component {
 }
 
 macroData = {
-  totalRevenue2020: "908,689.2",
+  totalRevenue2020: "908,689",
   totalRevenueChangeFrom2019To2020: "1.87%",
-  totalExpenses2020: "918,502.4",
+  totalExpenses2020: "918,502",
   totalExpensesChangeFrom2019To2020: "6.38%",
-  totalBalance2020: "-9,813.2",
+  totalBalance2020: "-9,813",
   totalBalanceChangeFrom2019To2020: "-134.35%",
 }
 

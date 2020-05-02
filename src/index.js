@@ -8,7 +8,7 @@ import awsExports from "./aws-exports";
 Amplify.configure(awsExports);
 
 ReactDOM.render(
-  <BrowserRouter basename="/demo/star-admin-free/react/template/demo_1/preview">
+  <BrowserRouter basename="/">
     <App />
   </BrowserRouter>
 , document.getElementById('root'));

@@ -10,6 +10,14 @@
             "StackName": "amplify-govdash-dev-212606",
             "StackId": "arn:aws:cloudformation:eu-west-1:588924578635:stack/amplify-govdash-dev-212606/8a5b6580-8cbb-11ea-822d-024980a27cd8",
             "AmplifyAppId": "d3bbxcupimf3pj"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d3bbxcupimf3pj",
+                    "type": "manual"
+                }
+            }
         }
     }
 }
